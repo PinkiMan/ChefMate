@@ -1,0 +1,30 @@
+{
+    "version": "0.1.0",
+    "created": "22/04/2025",
+    "ingredients": [],
+    "recipes": [
+        {
+            "name": "Palačinky",
+            "ingredients": [
+                {
+                    "name": "Mléko",
+                    "shop": null,
+                    "stored_home": null,
+                    "amount": null
+                },
+                {
+                    "name": "Vejce",
+                    "shop": null,
+                    "stored_home": null,
+                    "amount": null
+                }
+            ],
+            "procedure": null,
+            "difficulty": null,
+            "prep_time": null,
+            "cook_time": null,
+            "total_time": null,
+            "directions": null
+        }
+    ]
+}
