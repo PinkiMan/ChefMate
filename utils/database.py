@@ -95,8 +95,6 @@ class RecipeBookObject:
             self.recipe_list.append(new_recipe)
 
 
-
-
 class CookBook:
     def __init__(self):
         self.json_data = None
