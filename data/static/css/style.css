@@ -1,0 +1,47 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	/*background-color: #111;*/
+
+}
+
+.carousel-item img{
+	width: 100%;
+	height: 93vh;
+
+
+}
+
+
+.horizontal-card-img img{
+	width: 100%;
+	height: 35vh;
+
+
+
+}
+
+
+
+.about_img{
+	display: block;
+	max-height: 400px;
+	max-width: 600px;
+	width: auto;
+	height: auto;
+}
+
+.my-service img{
+	width: 100%;
+	height: 100%;
+}
+
+.chekcout-my-profile{
+	background: #333;
+}
+
+footer p{
+	margin-bottom: 0;
+}

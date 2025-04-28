@@ -1,3 +1,20 @@
+__author__ = "Pinkas Matěj - Pinki"
+__maintainer__ = "Pinkas Matěj - Pinki"
+__email__ = "pinkas.matej@gmail.com"
+__credits__ = []
+__created__ = "24/04/2025"
+__date__ = "24/04/2025"
+__status__ = "Prototype"
+__version__ = "0.1.0"
+__copyright__ = ""
+__license__ = ""
+
+"""
+Project: ChefMate
+Filename: database.py
+Directory: utils/
+"""
+
 import os
 import json
 import datetime
@@ -33,6 +50,7 @@ class IngredientBookObject:
     def add_ingredient(self, ingredient: IngredientObject):
         self.ingredient_list.append(ingredient)
 
+
 class RecipeObject:
     def __init__(self):
         self.name = None
@@ -55,16 +73,28 @@ class RecipeObject:
 
         return recipe_json
 
+    def load_from_json(self, json_string):
 
+        for attribute in json_string:
+            if hasattr(self, attribute):
+                setattr(self, attribute, json_string[attribute])
+
+        print("xd")
 
 class RecipeBookObject:
     def __init__(self):
         self.recipe_list = []
 
-
     def add_recipe(self, recipe: RecipeObject):
         self.recipe_list.append(recipe)
 
+    def load_from_json_list(self, recipe_json_list):
+        for recipe in recipe_json_list:
+            new_recipe = RecipeObject()
+            new_recipe.load_from_json(recipe)
+
+
+            print("xd")
 
 
 
@@ -74,7 +104,7 @@ class CookBook:
         self.filename = '../data/database.json'
 
         self.recipe_book = RecipeBookObject()
-        self.ingredient_book = None
+        self.ingredient_book = IngredientBookObject()
 
         self.load_from_json()
 
@@ -94,6 +124,8 @@ class CookBook:
     def load_from_json(self):
         with open(self.filename, "r", encoding="utf-8") as f:
             self.json_data = json.load(f)
+
+        self.recipe_book.load_from_json_list(self.json_data['recipes'])
 
     def save_to_json(self):
         with open(self.filename, "w", encoding="utf-8") as f:
@@ -121,6 +153,8 @@ class CookBook:
 
 if __name__ == "__main__":
     cook_book = CookBook()
+
+
 
     print('')
 
