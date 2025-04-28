@@ -79,7 +79,6 @@ class RecipeObject:
             if hasattr(self, attribute):
                 setattr(self, attribute, json_string[attribute])
 
-        print("xd")
 
 class RecipeBookObject:
     def __init__(self):
@@ -93,8 +92,8 @@ class RecipeBookObject:
             new_recipe = RecipeObject()
             new_recipe.load_from_json(recipe)
 
+            self.recipe_list.append(new_recipe)
 
-            print("xd")
 
 
 
