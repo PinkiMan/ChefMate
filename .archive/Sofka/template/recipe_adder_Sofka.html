@@ -1,0 +1,79 @@
+<!DOCTYPE html>   <!-- rikam tim prohlizeci (googlu), ze jde o html document -->
+<html lang="en">   <!-- tim zacinam i koncim kod, vse mezi bude v jazyce html, variabilne je tam pridany en-jako anglictina -->
+<head>
+    <meta charset="UTF-8">   <!-- definuje znaky aby to mohl prohlizec precist -->
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">  <!-- potreba pro spravne otevreni na ruznych zarizenich -->
+    <title>ChefMate</title>   <!-- Jedna se o nadpis ukazujici se na otevrene karte v prohlizeci-->
+</head>
+<style>
+  table, th, td {
+    border:1px solid black;
+    color: white
+  }
+  label {
+    font-weight: bold;
+    color: white;
+  }
+  em {
+  color: white;
+  }
+  caption {
+  color: white;
+  font-weight: bold;
+  }
+</style>  <!-- pulka width px jako border radius, tak bude kruh -->
+<body style="background-color:#3e4444;">    <!-- vnitrek a obsah stranky -->
+<h1><em>Tvorba receptů </em></h1> <!-- ruzne dulezitosti headingu (1-6) -->
+<p><em>Pokud chceš přidat recept, tak vyplň všechny kolonky.</em></p> <!-- p jako novy paragraf, odstavec -->
+  <form>
+    <label for="fname">Jméno receptu:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <br>
+    <label for="fname">Ingredience:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <br>
+    <label for="fname">Čas na přípravu (min.):</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <br>
+    <label for="fname">Čas vaření (min.):</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <br>
+    <label for="fname">Celkový čas (min.):</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <br>
+    <label for="fname">Náročnost:</label><br>
+    <input type="radio" id="fname" name="fname" value="LEHKÉ">
+    <label for="LEHKÉ">LEHKÉ</label><br>
+    <input type="radio" id="fname" name="fname" value="STŘEDNÍ">
+    <label for="STŘEDNÍ">STŘEDNÍ</label><br>
+    <input type="radio" id="fname" name="fname" value="TĚŽKÉ">
+    <label for="TĚŽKÉ">TĚŽKÉ</label>
+    <br>
+  </form>
+<br>
+<table style="width:100%">
+  <caption>Ingredience</caption>
+  <tr>
+    <td>Jablko</td>
+    <td>Banán</td>
+    <td>Mouka</td>
+  </tr>
+  <tr>
+    <td>Mléko</td>
+    <td>Cukr</td>
+    <td>Sůl</td>
+  </tr>
+  <tr>
+  <td>Strouhanka</td>
+  <td>Vejce</td>
+  <td>Pepř</td>
+  </tr>
+  <tr>
+  <td>Kuřecí maso</td>
+  <td>Smetana</td>
+  <td>Brambory</td>
+  </tr>
+</table><br>
+  <a href="lobby_flask.html">Domů</a> <!-- odkazuje na jinou stranku -->
+</body>
+</html> <!-- timto konci jazyk html, a dava se bezprostredne na konec dokumentu -->
