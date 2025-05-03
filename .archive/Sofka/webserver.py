@@ -23,7 +23,15 @@ app = Flask(__name__, template_folder="./template", static_folder="./static")
 
 @app.route('/', methods=["POST", "GET"])
 def homepage():
+    return render_template('lobby_flask_Sofka.html')
 
+@app.route('/recipe_adder_Sofka.html',methods=["POST", "GET"])
+def recipe_adder():
     return render_template('recipe_adder_Sofka.html')
+
+@app.route('/start_page.html',methods=["POST", "GET"])
+def choose_username():
+    return render_template('start_page.html')
+
 
 app.run(host='0.0.0.0', port=8093)

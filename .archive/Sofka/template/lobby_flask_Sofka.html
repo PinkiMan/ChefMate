@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChefMate</title>
+</head>
+<body>
+    {% for recipe in recipe_list: %}
+      <div>
+        <h2>{{recipe.name}}</h2>
+            <h5>Ingredience:</h5>
+                <ul>
+                    {% for ingredient in recipe.ingredients: %}
+                      <li>{{ingredient.name}}</li>
+                    {% endfor %}
+                </ul>
+            <h5>Postup:</h5>
+                <p>{{recipe.procedure}}</p>
+            <h5>Kroky:</h5>
+                <ol>
+                    {% for direction in recipe.directions: %}
+                      <li>{{direction}}}</li>
+                    {% endfor %}
+                </ol>
+
+      </div>
+    {% endfor %}
+    <a href="recipe_adder_Sofka.html">Přidat recept</a><br>
+    <a href="start_page.html">Účet</a>
+</body>
+</html>

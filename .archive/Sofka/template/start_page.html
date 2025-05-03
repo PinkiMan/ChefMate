@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChefMate</title>
+        <style>
+        body {
+            background-color: #141414;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-top: 50px;
+        }
+        .users-selection {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .user-profile {
+            width: 150px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .user-profile img {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid white;
+        }
+        .user-profile:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body><br>
+    <img src="static/chefmate.png" alt="chefmate_img" width=40%><br>
+    <div class="users-selection">
+        <div class="user-profile" onclick="select_user('ucet1')">
+            <img src="static/avatar1.png" alt="Účet 1">
+            <p>PINKI</p>
+        </div>
+        <div class="user-profile" onclick="select_user('ucet2')">
+            <img src="static/avatar2.png" alt="Účet 2">
+            <p>SOFI</p>
+        </div>
+        <div class="user-profile" onclick="select_user('ucet3')">
+            <img src="static/avatar3.png" alt="Účet 3">
+            <p>ADAM</p>
+        </div>
+        <div class="user-profile" onclick="select_user('ucet4')">
+            <img src="static/avatar4.png" alt="Účet 4">
+            <p>KATEŘINA</p>
+        </div>
+    </div>
+    <a href="/">Domů</a><br> <!-- odkazuje na jinou stranku -->
+    <a href="recipe_adder_Sofka.html">Přidat recept</a>
+</body>
+</html>
